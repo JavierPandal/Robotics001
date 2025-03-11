@@ -4,8 +4,7 @@ import roboticstoolbox as rtb
 from spatialmath import SE3
 from codigoVerTrayect import plot_robot_trajectory
 
-# Definir el robot KUKA KR 4 R600 usando parámetros DH
-#toolbox
+# Definir el robot usando parámetros DH
 robot = rtb.DHRobot(
     [
         rtb.RevoluteDH(d=0.45, a=0.15, alpha=np.deg2rad(-90), offset=0, qlim=[np.deg2rad(-170), np.deg2rad(170)]),
@@ -17,11 +16,13 @@ robot = rtb.DHRobot(
     ],
     name="Kuka KR8 R1620", base=SE3(0, 0, 0)
 )
+
 #Ponemos el TCP alineado con el brazo
 robot.tool = SE3.OA([0, 1, 0], [0,0,1]) #Right, elbow up
 robot.configurations_str('lu') #Valores en 0
 robot.qz = [0, 0, 0, 0, 0, 0] #Valores en 0
 robot.teach(robot.qz)
+
 #Verificar que el robot quedo igual en DH y en Toolbox
 print(robot)
 #Graficamos

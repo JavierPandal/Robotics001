@@ -14,7 +14,7 @@ aubo = rtb.DHRobot(
         rtb.RevoluteDH(d=0, a=0, alpha=np.deg2rad(90), offset=0, qlim=[np.deg2rad(-120), np.deg2rad(120)]),
         rtb.RevoluteDH(d=0.075, a=0, alpha=np.deg2rad(0), offset=0, qlim=[np.deg2rad(-350), np.deg2rad(350)])
     ],
-    name="Aubo i5"
+    name="KUKA KR 4 R600"
 )
 
 # Ponemos el TCP alineado con el brazo

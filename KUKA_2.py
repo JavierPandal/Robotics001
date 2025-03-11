@@ -14,11 +14,11 @@ import roboticstoolbox as rtb
 robot = rtb.DHRobot(
     [
         rtb.RevoluteDH(d=0.33, a=0, alpha=np.deg2rad(90), offset=0, qlim=[np.deg2rad(-170), np.deg2rad(170)]),
-        rtb.RevoluteDH(d=0, a=0.24, alpha=np.deg2rad(0), offset=np.deg2rad(90), qlim=[np.deg2rad(-195), np.deg2rad(40)]),
+        rtb.RevoluteDH(d=0, a=0.29, alpha=np.deg2rad(0), offset=np.deg2rad(90), qlim=[np.deg2rad(-195), np.deg2rad(40)]),
         rtb.RevoluteDH(d=0, a=0, alpha=np.deg2rad(90), offset=0, qlim=[np.deg2rad(-115), np.deg2rad(150)]),
         rtb.RevoluteDH(d=0.31, a=0, alpha=np.deg2rad(-90), offset=0, qlim=[np.deg2rad(-185), np.deg2rad(185)]),
         rtb.RevoluteDH(d=0, a=0, alpha=np.deg2rad(90), offset=0, qlim=[np.deg2rad(-120), np.deg2rad(120)]),
-        rtb.RevoluteDH(d=0, a=0, alpha=np.deg2rad(0), offset=0, qlim=[np.deg2rad(-350), np.deg2rad(350)])
+        rtb.RevoluteDH(d=0.075, a=0, alpha=np.deg2rad(0), offset=0, qlim=[np.deg2rad(-350), np.deg2rad(350)])
     ],
     name="KUKA KR 4 R600", base=SE3(0, 0, 0)
 )
